@@ -44,7 +44,7 @@ export const getPrescriptionByPhrase = async (req, res) => {
     });
 
     if (prescriptionsData.length === 0) {
-      return res.status(404).josn({ message: "Can't find this Prescrption" });
+      return res.status(404).json({ message: "Can't find this Prescription" });
     }
 
     res.status(200).json(prescriptionsData[0]);
@@ -53,6 +53,14 @@ export const getPrescriptionByPhrase = async (req, res) => {
   }
 };
 
-export const updatePresciption = (req, res) => {
-  res.send("Here is the update presc api");
+export const updatePresciption = async (req, res) => {
+  try {
+    const prescription = await Prescriptions.findByIdAndUpdate(
+      { _id: req.body.id },
+      { isExpired: "true" }
+    );
+    res.json({ message: "prescription has expired" });
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
 };

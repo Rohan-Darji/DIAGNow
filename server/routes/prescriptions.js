@@ -13,6 +13,6 @@ router.get("/", getAllPrescriptions);
 router.get("/:id", getPrescriptionById);
 router.post("/new", createPrescription);
 router.post("/getByPhrase", getPrescriptionByPhrase );
-router.patch("/update/:id", updatePresciption);
+router.patch("/update", updatePresciption);
 
 export default router;
