@@ -6,11 +6,13 @@ import {
   getPrescriptionById,
   createPrescription,
   updatePresciption,
+  getPrescriptionByPhrase
 } from "../controller/prescriptions.js";
 
 router.get("/", getAllPrescriptions);
 router.get("/:id", getPrescriptionById);
 router.post("/new", createPrescription);
+router.post("/getByPhrase", getPrescriptionByPhrase );
 router.patch("/update/:id", updatePresciption);
 
 export default router;
