@@ -1,3 +1,11 @@
+const Doctor = {
+  name: "Prajwal Jaiswal",
+  username: "doctor",
+  password: "doctor123",
+  qualifications: "MBBS, MD", 
+  hospital: "Seven Star Hospital" 
+}
+
 export const getDoctor = (req, res) => {
   res.send("This is the getDoctor route")
 }

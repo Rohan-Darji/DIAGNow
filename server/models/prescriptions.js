@@ -12,23 +12,49 @@ const prescriptionsSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  medicineName: {
+  medicineName1: {
     type: String,
     required: true,
   },
-  medicineDose: {
+  medicineDose1: {
     type: String,
     required: true,
   },
-  medicineStrength: {
+  medicineStrength1: {
     type: String,
     required: true,
   },
-  medicineDuration: {
+  medicineDuration2: {
     type: String,
-    required: true,
   },
-  isMedicinePurchased: {
+  medicineName2: {
+    type: String,
+  },
+  medicineDose2: {
+    type: String,
+  },
+  medicineStrength2: {
+    type: String,
+  },
+  medicineDuration2: {
+    type: String,
+  },
+  medicineDuration2: {
+    type: String,
+  },
+  medicineName3: {
+    type: String,
+  },
+  medicineDose3: {
+    type: String,
+  },
+  medicineStrength3: {
+    type: String,
+  },
+  medicineDuration3: {
+    type: String,
+  },
+  isExpired: {
     type: String,
     default: "false"
   },
