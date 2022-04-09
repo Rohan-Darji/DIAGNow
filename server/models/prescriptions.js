@@ -28,7 +28,7 @@ const prescriptionsSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  isMedicinePurchased: {
+  isExpired: {
     type: String,
     default: "false"
   },
