@@ -12,7 +12,7 @@ export const getAllPrescriptions = async (req, res) => {
 
 export const createPrescription = async (req, res) => {
   try {
-    const secretPhrase = randomWords({exactly: 10, join: "-"})
+    const secretPhrase = randomWords({exactly: 5, join: "-"})
     const newPrescription = await Prescriptions(req.body);
     const result = newPrescription.save()
     newPrescription.secretPhrase = secretPhrase
