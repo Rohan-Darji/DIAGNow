@@ -32,8 +32,9 @@ const Login = ({ setDoctorId }) => {
 
   return (
     <div>
-      <h1>login</h1>
       <form className="loginContainer">
+        <h2>Doctor Login</h2>
+        <br />
         <div className="formSection">
           <label htmlFor="username">Username</label>
           <input

@@ -5,10 +5,9 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 import "./AddPrescription.css";
 
-const AddPrescription = ({ doctorId, doctorName }) => {
+const AddPrescription = ({ doctorId }) => {
   const [formData, setFormData] = useState({
     doctorId: doctorId,
-    doctorName: doctorName,
     patientName: "",
     patientAge: "",
     medicineName1: "",
@@ -37,7 +36,7 @@ const AddPrescription = ({ doctorId, doctorName }) => {
   const submitPrescription = async (e) => {
     e.preventDefault();
     setButtonClicked(true);
-    // console.log(formData);
+    console.log(formData);
     try {
       const response = await axios.post(
         "http://localhost:5000/api/prescriptions/new",
