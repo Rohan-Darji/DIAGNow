@@ -1,6 +1,12 @@
 import mongoose from "mongoose";
 
 const prescriptionsSchema = new mongoose.Schema({
+  doctorName: {
+    type: String
+  },
+  doctorId: {
+    type: String
+  },
   secretPhrase: {
     type: String,
   },

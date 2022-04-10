@@ -5,8 +5,10 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 import "./AddPrescription.css";
 
-const AddPrescription = () => {
+const AddPrescription = ({ doctorId, doctorName }) => {
   const [formData, setFormData] = useState({
+    doctorId: doctorId,
+    doctorName: doctorName,
     patientName: "",
     patientAge: "",
     medicineName1: "",

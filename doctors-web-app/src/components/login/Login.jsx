@@ -1,9 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
+import "./Login.css";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
-const Login = () => {
+const Login = ({ setDoctorId }) => {
+  const navigate = useNavigate();
+  const [loginForm, setLoginForm] = useState({
+    username: "",
+    password: "",
+  });
+
+  const onChange = (value) => {
+    setLoginForm((prev) => {
+      return { ...prev, ...value };
+    });
+  };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        `http://localhost:5000/api/doctors/login`,
+        { username: loginForm.username, password: loginForm.password }
+      );
+      setDoctorId(response.data.doctorId);
+      response.data.message === "Success" && navigate("/createPrescription");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div>
       <h1>login</h1>
+      <form className="loginContainer">
+        <div className="formSection">
+          <label htmlFor="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            value={loginForm.username}
+            onChange={(e) => onChange({ username: e.target.value })}
+          />
+        </div>
+        <div className="formSection">
+          <label htmlFor="password">Password</label>
+          <input
+            type="text"
+            id="password"
+            value={loginForm.password}
+            onChange={(e) => onChange({ password: e.target.value })}
+          />
+        </div>
+        <button onClick={handleLogin}>Login</button>
+      </form>
     </div>
   );
 };

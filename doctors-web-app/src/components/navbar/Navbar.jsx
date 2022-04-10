@@ -5,7 +5,7 @@ import brand from "./DIAGNow.png";
 import logo from "./iconWithShadow.png";
 import userImg from "./dummy-user-img.png";
 
-const Navbar = () => {
+const Navbar = ({doctorName}) => {
   return (
     <div className="navbar">
       <div className="brand">
@@ -13,7 +13,7 @@ const Navbar = () => {
         <img src={brand} alt="brand name" className="brandName" />
       </div>
       <div className="loginUser">
-        <h3>Dr. Vinay Patkar</h3>
+        <h3>{doctorName}</h3>
         <img src={userImg} alt="user img" className="userImg" />
       </div>
     </div>
