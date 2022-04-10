@@ -2,8 +2,7 @@ import express from "express";
 import cors from "cors";
 
 import prescriptionsRoutes from "./routes/prescriptions.js";
-import doctorsRoutes from "./routes/doctors.js"
-
+import doctorsRoutes from "./routes/doctors.js";
 
 import "./config/database.js";
 
