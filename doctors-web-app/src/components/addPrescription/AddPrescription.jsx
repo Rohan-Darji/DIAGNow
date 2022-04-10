@@ -39,9 +39,13 @@ const AddPrescription = ({ doctorId }) => {
     console.log(formData);
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/prescriptions/new",
+        "https://desolate-wave-26485.herokuapp.com/api/prescriptions/new",
         formData
       );
+      // const response = await axios.post(
+      //   "http://localhost:5000/api/prescriptions/new",
+      //   formData
+      // );
       setSecretPhrase(response.data.secretPhrase);
     } catch (err) {
       console.log(err);

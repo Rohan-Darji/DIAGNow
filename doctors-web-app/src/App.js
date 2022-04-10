@@ -13,7 +13,8 @@ function App() {
   useEffect(() => {
     const getDoctorName = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/doctors/${doctorId}`)
+        const response = await axios.get(`https://desolate-wave-26485.herokuapp.com/api/doctors/${doctorId}`)
+        // const response = await axios.get(`http://localhost:5000/api/doctors/${doctorId}`)
         setDoctorName(response.data.name)
       } catch (err) {
         console.log(err)
@@ -28,7 +29,7 @@ function App() {
       <Navbar doctorName={doctorName} />
       <Router>
         <Routes>
-          <Route path="/login" element={<Login setDoctorId={setDoctorId} />}></Route>
+          <Route path="/" element={<Login setDoctorId={setDoctorId} />}></Route>
           <Route path="/createPrescription" element={<AddPrescription doctorId={doctorId} doctorName={doctorName} />}></Route>
         </Routes>
       </Router>

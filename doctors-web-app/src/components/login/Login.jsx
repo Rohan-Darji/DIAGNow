@@ -20,9 +20,13 @@ const Login = ({ setDoctorId }) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/doctors/login`,
+        `https://desolate-wave-26485.herokuapp.com/api/doctors/login`,
         { username: loginForm.username, password: loginForm.password }
       );
+      // const response = await axios.post(
+      //   `http://localhost:5000/api/doctors/login`,
+      //   { username: loginForm.username, password: loginForm.password }
+      // );
       setDoctorId(response.data.doctorId);
       response.data.message === "Success" && navigate("/createPrescription");
     } catch (err) {
@@ -47,7 +51,7 @@ const Login = ({ setDoctorId }) => {
         <div className="formSection">
           <label htmlFor="password">Password</label>
           <input
-            type="text"
+            type="password"
             id="password"
             value={loginForm.password}
             onChange={(e) => onChange({ password: e.target.value })}
