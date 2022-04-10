@@ -11,20 +11,10 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import axios from "axios";
 
-// function createData(Medicine: string, Days: number, DosagesPerDay: number) {
-//   return { Medicine, Days, DosagesPerDay };
-// }
-
-// const rows = [
-//   createData("Paracetamol", 10, 6),
-//   createData("Gontazol", 10, 9),
-//   createData("Gabatron", 12, 2),
-//   createData("Combiflam", 23, 1),
-//   createData("Jamalghota", 5, 2),
-// ];
 
 export default function BasicTable({ prescription }) {
   const id = prescription._id;
+  const doctorId = prescription.doctorId;
   const name = prescription.patientName;
   const age = prescription.patientAge;
   const medicineName1 = prescription.medicineName1;
