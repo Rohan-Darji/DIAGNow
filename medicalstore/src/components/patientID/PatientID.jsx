@@ -11,9 +11,13 @@ function PatientID({prescription, setPrescription }) {
     console.log(secretPhrase);
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/prescriptions/getByPhrase",
+        "https://desolate-wave-26485.herokuapp.com/api/prescriptions/getByPhrase",
         { secretPhrase: secretPhrase }
       );
+      // const response = await axios.post(
+      //   "http://localhost:5000/api/prescriptions/getByPhrase",
+      //   { secretPhrase: secretPhrase }
+      // );
       console.log(response.data);
       setPrescription(response.data);
     //   console.log(prescription)

@@ -35,7 +35,8 @@ export default function BasicTable({ prescription }) {
   const verifyPrescription = async (e) => {
     e.preventDefault()
     try {
-      const response = await axios.patch("http://localhost:5000/api/prescriptions/update", {id: id})
+      // const response = await axios.patch("https://desolate-wave-26485.herokuapp.com/api/prescriptions/update", {id: id})
+      const response = await axios.patch("https://desolate-wave-26485.herokuapp.com/api/prescriptions/update", {id: id})
       console.log(response.data)
       setVerifyResponse("This prescription is now been expired. You cannot use this prescription again!")
     } catch (err) {
