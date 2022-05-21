@@ -35,19 +35,28 @@ Analysis of Medical Reports
 
 ### App Interface:
 <kbd>
-<img src="Interfaces/SpalshScreenv1.png" height=600>
+<img src="Interfaces/SpalshScreenv1.png" width = 300 height=600>
 </kbd>
 <kbd>
-<img src="Interfaces/Dashboard.png" height=600>
+<img src="Interfaces/Dashboard.png" width = 300 height=600>
 </kbd>
 <kbd>
-<img src="Interfaces/bot.jpeg" height=600>
+<img src="Interfaces/bot.jpeg" width = 300 height=600>
+</kbd>
+<kbd>
+<img src="Interfaces/xray.jpg" width = 300 height=600>
+</kbd>
+<kbd>
+<img src="Interfaces/diagnosis.jpg" width = 300 height=600>
 </kbd>
 <hr>
 
 ## Links:
+### E-Prescription
 http://diagnowcreate.netlify.com
 
 http://diagnowaccess.netlify.com
 
+### Report API (Disease Prediction)
+https://diagnow-report.herokuapp.com
 
