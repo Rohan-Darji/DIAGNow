@@ -1,18 +1,5 @@
 # DIAGNow
 Application for Automated Medical Report Diagnosis, Medications trackment,  Medical Record  Storage &amp; Diet.
-# KJSCE Hack 6.0
-## Result: 1st Runner Up 🥈
-### Team No.24 : O(1) 👨🏻‍💻
-```Prajwal Jaiswal```
-
-```Jaydeep Jethwa``` 
-
-```Abhishek Mishra``` 
-
-```Ravi Prasad``` 
-##### Computer Engineering,
-#### Thakur College of Engineering & Technology
-<hr>
 
 ## DIAGNow
 
